@@ -29,6 +29,11 @@ const myIfo = {
             "university": "ISIME Betongolo"
         }
     ],
+    "formations": {
+        "date": 2023,
+        "parcours": "Dev web",
+        "formateur": "Digital Training Center"
+    },
     "experiences": {
         "stage":
             {
@@ -75,6 +80,31 @@ if (experience != null) {
     'Description: ' + project.description + '<br>' +
     'Langage: ' + project.techno[0] + ', ' + project.techno[1] + ', ' + project.techno[2];   
 }
+
+let education = document.getElementById('etude')
+if (education != null) {
+    let educations = myIfo.educations
+    for (const key in educations) {
+        document.getElementById('list-edication').innerHTML += 
+        '<div class="list">'+
+            '<i class="cyrcle"></i>'+
+            '<p class="year">'+ educations[key].date +'</p>'+
+            '<p class="desc">' +
+                educations[key].diplome +'<br>' + educations[key].university +
+            '</p>'+
+        '</div>'
+    }
+
+    let formation = myIfo.formations
+    document.getElementById('list-formation').innerHTML = 
+        '<div class="list">'+
+            '<i class="cyrcle"></i>'+
+            '<p class="year">'+ formation.date +'</p>'+
+            '<p class="desc">' +
+                formation.parcours +'<br>' + formation.formateur +
+            '</p>'+
+        '</div>'
+} 
 
 // document.getElementById('stage').innerText = myIfo.experiences.stage.dateDebut  
 //mode dark and light
