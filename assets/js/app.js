@@ -30,16 +30,15 @@ const myIfo = {
         }
     ],
     "experiences": {
-        "stage": [
+        "stage":
             {
                 "dateDebut": "Aout 2022",
                 "dateFin": "Octobre 2020",
                 "company": "R@ndevTeam",
                 "lieu": "andavamba",
                 "post": "dev REACT NATIVE" 
-            }
-        ],
-        "projects": [
+            },
+        "projects":
             {
                 "name": "I-verbs",
                 "techno": [
@@ -49,18 +48,29 @@ const myIfo = {
                 ],
                 "description": "Verbe irrégulier anglais",
                 "lien": "https://github.com/mams97/I-Verb.git"
-            }
-        ]
+            },
     }
 }
 // add info
-document.getElementById('name').innerHTML = myIfo.name + '<br>' + myIfo.firstName[0] + '<br>' + myIfo.firstName[1];
-document.getElementById('mail').innerHTML = '<a href="' + myIfo.contacts.mail.path + '">' + myIfo.contacts.mail.userName + '</a>';
-document.getElementById('number').innerText = myIfo.contacts.number;
-document.getElementById('adress').innerText = myIfo.adress;
-document.getElementById('git').innerHTML = '<a href="' + myIfo.contacts.git.path + '">' + myIfo.contacts.git.userName + '</a>';
-document.getElementById('stage').innerText = myIfo.experiences.stage[0].dateDebut
+let about = document.getElementById('apropos');
+if (about != null) {
+    document.getElementById('name').innerHTML = myIfo.name + '<br>' + myIfo.firstName[0] + '<br>' + myIfo.firstName[1];
+    document.getElementById('mail').innerHTML = '<a href="' + myIfo.contacts.mail.path + '">' + myIfo.contacts.mail.userName + '</a>';
+    document.getElementById('number').innerText = myIfo.contacts.number;
+    document.getElementById('adress').innerText = myIfo.adress;
+    document.getElementById('git').innerHTML = '<a href="' + myIfo.contacts.git.path + '">' + myIfo.contacts.git.userName + '</a>';
+}
 
+let experience = document.getElementById('experience');
+if (experience != null) {
+    document.getElementById('stage').innerHTML = 
+    'Date debut: ' + myIfo.experiences.stage.dateDebut + '<br>' + 
+    'Date fin: ' + myIfo.experiences.stage.dateFin + '<br>' +
+    'Entreprise: ' + myIfo.experiences.stage.company + ' ' + myIfo.experiences.stage.lieu + '<br>' +
+    'Poste: ' + myIfo.experiences.stage.post;
+}
+
+// document.getElementById('stage').innerText = myIfo.experiences.stage.dateDebut  
 //mode dark and light
 let mode = document.getElementById('mode')
 let dark = document.getElementById("dark")
