@@ -63,11 +63,17 @@ if (about != null) {
 
 let experience = document.getElementById('experience');
 if (experience != null) {
+    let stage = myIfo.experiences.stage;
+    let project = myIfo.experiences.projects;
     document.getElementById('stage').innerHTML = 
-    'Date debut: ' + myIfo.experiences.stage.dateDebut + '<br>' + 
-    'Date fin: ' + myIfo.experiences.stage.dateFin + '<br>' +
-    'Entreprise: ' + myIfo.experiences.stage.company + ' ' + myIfo.experiences.stage.lieu + '<br>' +
-    'Poste: ' + myIfo.experiences.stage.post;
+    'Date debut: ' + stage.dateDebut + '<br>' + 
+    'Date fin: ' + stage.dateFin + '<br>' +
+    'Entreprise: ' + stage.company + ' ' + stage.lieu + '<br>' +
+    'Poste: ' + stage.post;
+    document.getElementById('project').innerHTML = 
+    'Nom: ' + project.name + '<br>' +
+    'Description: ' + project.description + '<br>' +
+    'Langage: ' + project.techno[0] + ', ' + project.techno[1] + ', ' + project.techno[2];   
 }
 
 // document.getElementById('stage').innerText = myIfo.experiences.stage.dateDebut  
