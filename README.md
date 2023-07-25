@@ -1,2 +1,5 @@
 # my portfolio
-Languega
+- Language
+* HTML
+* CSS
+* JS
