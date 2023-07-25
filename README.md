@@ -1,5 +1,5 @@
 # my portfolio
-- Language
+Languages
 * HTML
 * CSS
 * JS
